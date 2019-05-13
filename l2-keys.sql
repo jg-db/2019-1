@@ -15,3 +15,5 @@ CONSTRAINT kf_topic
   FOREIGN KEY (topic_id)
   REFERENCES xx_course (course_id)
 );
+
+insert into xx_topics values (1,1,'test');
