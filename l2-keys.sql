@@ -17,3 +17,4 @@ CONSTRAINT kf_topic
 );
 
 insert into xx_topics values (1,1,'test');
+// ORA-02291: integrity constraint (SYSTEM.KF_TOPIC) violated - parent key not found due to missing record in xx_course with course_id =1
