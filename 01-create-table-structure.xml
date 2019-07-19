@@ -1,0 +1,36 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+	<changeSet author="Aleksandrs" id="01">
+		<createTable remarks="Used to store orders information"
+			tableName="ORDERS">
+			<column name="ID" type="NUMBER">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="ORDER_NUMBER" type="VARCHAR2(100)" />
+			<column name="CUSTOMER_NAME" type="VARCHAR2(100)" />
+			<column name="SHIPMENT_DATE" type="DATE" />			
+			<column name="STATUS" type="VARCHAR2(75)" />
+			<column name="TOTAL_AMOUNT" type="NUMBER" />
+			<column name="CURRENCY" type="VARCHAR2(10)" />
+			<column name="ORDERED_DATE" type="DATE" />
+			</createTable>
+
+		<createTable remarks="Used to store order lines information"
+			tableName="LINES">
+			<column name="ID" type="NUMBER">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="LINE_NUMBER" type="NUMBER" />
+			<column name="ORDER_ID" type="NUMBER" />			
+			<column name="ITEM" type="VARCHAR2(100)" />
+			<column name="UNIT_PRICE" type="NUMBER" />
+			<column name="QUANTITY" type="NUMBER" />
+			<column name="STATUS" type="VARCHAR2(200)" />
+			<column name="UOM" type="VARCHAR2(25)" />
+			</createTable>
+			
+	</changeSet>
+</databaseChangeLog>
