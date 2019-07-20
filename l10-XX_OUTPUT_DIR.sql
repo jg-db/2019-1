@@ -1,0 +1,1 @@
+CREATE OR REPLACE DIRECTORY xx_output AS 'C:\Misc\db_course\lesson10';
